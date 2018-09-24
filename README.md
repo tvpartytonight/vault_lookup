@@ -1,7 +1,9 @@
 
 # vault_lookup
 
-Module to communicate with Hashicorp Vault servers from a puppet agent.
+A module to make it easier to fetch secrets from Hashicorp Vault from a Puppet agent. For example, to lookup the value of the `secret/test key` your Puppet code would be:
+
+```$secret = Deferred('vault_lookup',["secret/test", 'http://vault.ourorg.tld:8200'])```
 
 #### Table of Contents
 
